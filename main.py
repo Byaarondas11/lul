@@ -1,54 +1,26 @@
+from flask import Flask, render_template
 
-x=5
-y=2
+app = Flask (__name__)
 
-print (x-y)
+@app.route("/")
+def index():
+    return render_template("index.html")
 
-some_string = "voy a cometer la suisidasion"
+@app.route("/about")
+def about_me():
+    return render_template("about.html")
 
-print(some_string)
+@app.route("/portfolio")
+def portfolio():
+    return render_template("portfolio.html"
 
+@app.route("/portfolio/Fakebook")
+def portfolio_facebook():
+    return render_template("fakebook.html")
 
-bool_one = True
-bool_two = False
+@app.route("/portfolio/boogle")
+def portfolio_boogle():
+    return render_template("boogle.html")
 
-user_name = input("Please enter your name: ")
-
-print("Hello " + user_name + "!")
-
-mood = input("What is your mood today? ")
-
-if mood == "happy":
-    print("It is great to see you happy!")
-elif mood == "nervous":
-    print("take it easy")
-elif mood == "sad":
-    print("i wish you getting better")
-elif mood == "excited":
-    print("keep calm")
-elif mood == "relaxed":
-    print("day of netflix and bed")
-else:
-    print("aaron es un vago y no puso para esa respuesta")
-
-x = int(input("Enter the value for x: "))
-
-y = int(input("Enter the value for y: "))
-
-operation = input("elige(+, -, *, /: ")
-
-if operation == "+":
-    print(x + y)
-elif operation == "-":
-    print(x - y)
-elif operation == "*":
-    print(x * y)
-elif operation == "/":
-    print(x / y)
-else:
-    print("You did not provide the correct math operation."
-
-
-
-
-
+if __name__ == '__main__':
+    app.run()
